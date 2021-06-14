@@ -6,8 +6,6 @@
 - `swagger-jsdoc` to write the specs
 - `express-swagger-ui` to show the Swagger interface.
 
-## Table of Contents
-
 ## Getting Started
 
 ```sh
