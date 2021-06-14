@@ -26,7 +26,9 @@ const options = {
     },
     servers: [
       {
-        url: `${settings.protocol}://${settings.host}:${settings.port}`, // you can also specify the staging, dev and prod too
+        url: `${settings.protocol}://${settings.host}${
+          settings.env == "development" ? `:${settings.port}` : ""
+        }`, // you can also specify the staging, dev and prod too
       },
     ],
   },
