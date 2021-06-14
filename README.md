@@ -1,6 +1,6 @@
 # [express-swagger-api](https://github.com/murshidazher/express-swagger-api.git)
 
-> An express application with swagger, swagger-jsdoc and express-swagger-ui. The whole tutorial is available [here](https://www.youtube.com/watch?v=S8kmHtQeflo)
+> An express application with swagger, swagger-jsdoc and express-swagger-ui. The step-by-step walkthrough can be found [here](https://www.youtube.com/watch?v=S8kmHtQeflo).
 
 - an `expressjs` CRUD application and document it using Swagger.
 - `swagger-jsdoc` to write the specs
