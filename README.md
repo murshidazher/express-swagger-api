@@ -6,6 +6,7 @@
 - `swagger-jsdoc` to write the specs
 - `express-swagger-ui` to show the Swagger interface.
 - `redoc` for mobile friendly API documentation.
+- Use [RapidAPI](https://www.youtube.com/watch?v=3nl8BewU0yc) for documenation, testing, discovery and integration of API
 
 ## Getting Started
 
@@ -16,7 +17,7 @@
 
 ## Up and Running
 
-> To see the swagger documentation go to [http://localhost:4000/api-docs/](http://localhost:4000/api-docs/).
+> To see the swagger documentation go to [http://localhost:4000/api/v1/api-docs/](http://localhost:4000/api/v1/api-docs/).
 
 ```sh
 > git clone https://github.com/murshidazher/express-swagger-api.git
@@ -33,7 +34,7 @@
 
 ## Endpoints
 
-List of Endpoints
+List of Endpoints of `/api/v1/`,
 
 |      Endpoints       |               Description               |
 | :------------------: | :-------------------------------------: |

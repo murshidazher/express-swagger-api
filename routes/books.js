@@ -38,7 +38,7 @@ const idLength = 8;
 
 /**
  * @swagger
- * /books:
+ * /api/v1/books:
  *   get:
  *     summary: Returns the list of all the books
  *     tags: [Books]
@@ -61,7 +61,7 @@ router.get("/", (req, res) => {
 
 /**
  * @swagger
- * /books/{id}:
+ * /api/v1/books/{id}:
  *   get:
  *     summary: Get the book by id
  *     tags: [Books]
@@ -95,7 +95,7 @@ router.get("/:id", (req, res) => {
 
 /**
  * @swagger
- * /books:
+ * /api/v1/books:
  *   post:
  *     summary: Create a new book
  *     tags: [Books]
@@ -133,7 +133,7 @@ router.post("/", (req, res) => {
 
 /**
  * @swagger
- * /books/{id}:
+ * /api/v1/books/{id}:
  *  put:
  *    summary: Update the book by the id
  *    tags: [Books]
@@ -179,7 +179,7 @@ router.put("/:id", (req, res) => {
 
 /**
  * @swagger
- * /books/{id}:
+ * /api/v1/books/{id}:
  *   delete:
  *     summary: Remove the book by id
  *     tags: [Books]

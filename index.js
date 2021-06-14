@@ -54,7 +54,7 @@ const specs = swaggerJsDoc(options);
 const app = express();
 
 // create a route with swagger
-app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(specs));
+app.use("/api/v1/swagger", swaggerUI.serve, swaggerUI.setup(specs));
 
 app.db = db;
 
@@ -62,9 +62,9 @@ app.use(cors());
 app.use(express.json());
 app.use(morgan("dev"));
 
-app.use("/", defaultRouter);
-app.use("/books", booksRouter);
-app.use("/docs", redocRouter);
+app.use("/api/v1/", defaultRouter);
+app.use("/api/v1/books", booksRouter);
+app.use("/api/v1/docs", redocRouter);
 
 app.listen(settings.port, (err) => {
   if (err) {
