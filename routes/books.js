@@ -16,9 +16,13 @@ const idLength = 8;
  *       properties:
  *         id:
  *           type: string
+ *           format: uuid
  *           description: The auto-generated id of the book
+ *           readOnly: true
  *         title:
  *           type: string
+ *           minLength: 2
+ *           maxLength: 100
  *           description: The book title
  *         author:
  *           type: string
@@ -126,8 +130,8 @@ router.get("/:id", (req, res) => {
 router.post("/", (req, res) => {
   try {
     const book = {
-      id: nanoid(idLength),
       ...req.body,
+      id: nanoid(idLength),
     };
 
     req.app.db.get("books").push(book).write();
