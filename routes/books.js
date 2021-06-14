@@ -108,6 +108,13 @@ router.get("/:id", (req, res) => {
  *     responses:
  *       200:
  *         description: The book was successfully created
+ *         headers:
+            Location:
+              description: Location of the created book
+              schema:
+                type: string
+                format: uri
+                example: http://example.com/api/v1/books/{assinedIdValue}
  *         content:
  *           application/json:
  *             schema:
