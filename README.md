@@ -41,6 +41,10 @@ List of Endpoints
 |       `/docs`        |   Redoc mobile friendly documentation   |
 | `/docs/swagger.json` | Download OpenAPI3 Specification in JSON |
 
+## References
+
+- Example [pet-api](https://petstore.swagger.io/) OpenAPI specification.
+
 ## License
 
 [MIT](LICENSE) © 2021 Murshid Azher.
