@@ -30,7 +30,7 @@
 
 - We need to create a multi-line comment with `@swagger`.
 - In `components` section we define the schema which could be re-used with the `ref` keyword.
-- We define `tags` to group our requests.
+- We define `tags` to group our requests, without them appearing in the `default` group.
 
 ## License
 
