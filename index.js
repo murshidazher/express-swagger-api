@@ -1,4 +1,5 @@
 const express = require("express");
+const fs = require("fs");
 const cors = require("cors");
 const morgan = require("morgan");
 const low = require("lowdb");
@@ -6,6 +7,7 @@ const swaggerUI = require("swagger-ui-express");
 const swaggerJsDoc = require("swagger-jsdoc");
 const defaultRouter = require("./routes/default");
 const booksRouter = require("./routes/books");
+const redocRouter = require("./routes/redoc");
 const settings = require("./config/settings");
 
 const FileSync = require("lowdb/adapters/FileSync");
@@ -52,9 +54,24 @@ app.use(morgan("dev"));
 
 app.use("/", defaultRouter);
 app.use("/books", booksRouter);
+app.use("/docs", redocRouter);
 
-app.listen(settings.port, () =>
-  console.log(
-    `The server is running on ${settings.protocol}://${settings.host}:${settings.port}`
-  )
-);
+app.listen(settings.port, (err) => {
+  if (err) {
+    console.log(err);
+  } else {
+    // write to specification to a file
+    try {
+      fs.writeFileSync("./docs/swagger.json", JSON.stringify(specs));
+    } catch (err) {
+      console.error(err);
+    }
+
+    console.log(`NODE_ENV = ${settings.env}`);
+    console.log(
+      `🚀 Server started at ${settings.protocol}://${settings.host}${
+        settings.env == "development" ? `:${settings.port}` : ""
+      }`
+    );
+  }
+});
