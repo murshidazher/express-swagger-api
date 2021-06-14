@@ -15,6 +15,17 @@
 > npm i express lowdb@1.0.0 morgan nanoid cors swagger-jsdoc@6.0.1 swagger-ui-express
 ```
 
+## Up and Running
+
+> To see the swagger documentation go to [http://localhost:4000/api-docs/](http://localhost:4000/api-docs/).
+
+```sh
+> git clone https://github.com/murshidazher/express-swagger-api.git
+> cd express-swagger-api
+> npm install
+> npm start
+```
+
 ## License
 
 [MIT](LICENSE) © 2021 Murshid Azher.
