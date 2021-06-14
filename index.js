@@ -42,6 +42,8 @@ const app = express();
 // create a route with swagger
 app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(specs));
 
+app.db = db;
+
 app.use(cors());
 app.use(express.json());
 app.use(morgan("dev"));
