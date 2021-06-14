@@ -26,6 +26,12 @@
 > npm start
 ```
 
+## Swagger Doc Comments
+
+- We need to create a multi-line comment with `@swagger`.
+- In `components` section we define the schema which could be re-used with the `ref` keyword.
+- We define `tags` to group our requests.
+
 ## License
 
 [MIT](LICENSE) © 2021 Murshid Azher.
