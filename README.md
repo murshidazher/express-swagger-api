@@ -1,6 +1,6 @@
 # [express-swagger-api](https://github.com/murshidazher/express-swagger-api.git)
 
-> An express application with swagger, swagger-jsdoc and express-swagger-ui.
+> An express application with swagger, swagger-jsdoc, express-swagger-ui and redoc.
 
 - `expressjs` CRUD application.
 - `swagger-jsdoc` to write the specs

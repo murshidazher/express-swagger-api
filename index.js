@@ -22,9 +22,19 @@ const options = {
   definition: {
     openapi: "3.0.0", // specify the version of open api
     info: {
-      title: "Library API", // specify the title of api
+      title: "OpenAPI for Library", // specify the title of api
       version: "1.0.0",
-      description: "A simple Express Library API",
+      description: "Specification for OpenAPI based Library API",
+      termsOfService: "https://github.com/murshidazher/terms/",
+      contact: {
+        name: "Murshid Azher",
+        url: "https://github.com/murshidazher",
+        email: "hello@murshidazher.com",
+      },
+      license: {
+        name: "MIT",
+        url: "https://github.com/murshidazher/express-swagger-api/LICENSE",
+      },
     },
     servers: [
       {
