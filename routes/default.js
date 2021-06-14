@@ -10,9 +10,8 @@ const router = express.Router();
  *       properties:
  *         response:
  *           type: string
+ *           example: pong
  *           description: The auto-generated response for heartbeat
- *       example:
- *         response: pong
  */
 
 /**

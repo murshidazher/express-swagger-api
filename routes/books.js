@@ -18,19 +18,20 @@ const idLength = 8;
  *           type: string
  *           format: uuid
  *           description: The auto-generated id of the book
+ *           example: d5fE_asz
  *           readOnly: true
  *         title:
  *           type: string
  *           minLength: 2
  *           maxLength: 100
+ *           example: The New Turing Omnibus
  *           description: The book title
  *         author:
  *           type: string
+ *           minLength: 2
+ *           maxLength: 100
+ *           example: Alexander K. Dewdney
  *           description: The book author
- *       example:
- *         id: d5fE_asz
- *         title: The New Turing Omnibus
- *         author: Alexander K. Dewdney
  */
 
 /**
@@ -113,12 +114,12 @@ router.get("/:id", (req, res) => {
  *       200:
  *         description: The book was successfully created
  *         headers:
-            Location:
-              description: Location of the created book
-              schema:
-                type: string
-                format: uri
-                example: http://example.com/api/v1/books/{assinedIdValue}
+ *          Location:
+ *            description: Location of the created book
+ *            schema:
+ *              type: string
+ *              format: uri
+ *              example: 'http://example.com/api/v1/books/{assinedIdValue}'
  *         content:
  *           application/json:
  *             schema:
