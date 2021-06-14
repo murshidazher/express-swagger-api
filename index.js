@@ -1,5 +1,4 @@
 const express = require("express");
-const os = require("os");
 const cors = require("cors");
 const morgan = require("morgan");
 const low = require("lowdb");
@@ -7,8 +6,7 @@ const swaggerUI = require("swagger-ui-express");
 const swaggerJsDoc = require("swagger-jsdoc");
 const defaultRouter = require("./routes/default");
 const booksRouter = require("./routes/books");
-
-const PORT = process.env.PORT || 4000;
+const settings = require("./config/settings");
 
 const FileSync = require("lowdb/adapters/FileSync");
 
@@ -28,7 +26,7 @@ const options = {
     },
     servers: [
       {
-        url: `http://${os.hostname}:${PORT}`, // you can also specify the staging, dev and prod too
+        url: `${settings.protocol}://${settings.host}:${settings.port}`, // you can also specify the staging, dev and prod too
       },
     ],
   },
@@ -53,6 +51,8 @@ app.use(morgan("dev"));
 app.use("/", defaultRouter);
 app.use("/books", booksRouter);
 
-app.listen(PORT, () =>
-  console.log(`The server is running on http://${os.hostname}:${PORT}`)
+app.listen(settings.port, () =>
+  console.log(
+    `The server is running on ${settings.protocol}://${settings.host}:${settings.port}`
+  )
 );
