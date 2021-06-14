@@ -20,7 +20,6 @@ const router = express.Router();
  * /api/v1:
  *   get:
  *     summary: Returns a response as pong
- *     tags: [Books]
  *     responses:
  *       200:
  *         description: The initial heartbeat request
